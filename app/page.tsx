@@ -1,9 +1,15 @@
-import { HomeUi } from "./home_ui";
+import { HomeStatic } from "./home_static";
+import { ReadImageName } from "@/actions/get_image_names";
+import { CarouselHome } from "@/components/carousel_home";
 
-export default function Home() {
+export default async function Home() {
+  const imageNames = await ReadImageName();
   return (
     <div>
-      <HomeUi />
+      <HomeStatic />
+
+      {/* the Carousel section */}
+      <CarouselHome imageNames={imageNames} />
     </div>
   );
 }

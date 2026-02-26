@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Python environment & cache (for your ML models)
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Large Data & Model weights (VERY important for CPU speed)
+*.pth
+*.csv
+*.json
+*.weights
+*.h5
+
+# Git & IDE
+.git/
+.vscode/
+.DS_Store
+
+# Ignore all env files
+.env
+.env.local
+.env.*
+*.env
+**/.env.local
+
+# Exclude other common secret files
+secrets/
+*.pem
+*.key
